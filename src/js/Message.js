@@ -1,13 +1,11 @@
-import React from 'react'
+import React from "react";
 
 const Message = () => {
   return (
     <div className="content">
-      <h1>Rexpack</h1>
-      <p className="description">React, Express, and Webpack Boilerplate Application</p>
-      <div className="awful-selfie"></div>
+      <h1>Kan du vissla?</h1>
     </div>
-  )
-}
+  );
+};
 
-export default Message
+export default Message;
