@@ -61,16 +61,6 @@ h2 {
   padding: 30px;
 }
 
-.heart {
-  width: 150px;
-  height: 150px;
-  background-image: url(../img/heart.jpg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  margin-bottom: 100px;
-  margin-top: 40px;
-}
 .submitted {
   display: flex;
   align-items: center;
