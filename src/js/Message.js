@@ -8,6 +8,7 @@ class Message extends Component {
       isHelper: false,
       isElderHelper: false,
       isChildHelper: false,
+      gdprAccepted: false,
       isSubmitted: false,
     };
   }
@@ -65,6 +66,11 @@ class Message extends Component {
       isSubmitted: true,
     });
   };
+  handleAcceptGdpr = () => {
+    this.setState({
+      gdprAccepted: !this.state.gdprAccepted,
+    });
+  };
   render() {
     return (
       <div className="content">
@@ -81,10 +87,11 @@ class Message extends Component {
                     utanför familjen, vilket kan leda till psykisk ohälsa.
                   </p>
                   <p className="description">
-                    I projektet "Kan du vissla?" kan du som pensionär eller
-                    lärare hjälpa barn som tappar kontakt med viktiga vuxna i
-                    sina liv när skolor, idrott och andra aktiviteter blir
-                    nedstängda genom att bli brevvän med ett barn.
+                    I projektet "Kan du vissla?" kan du som pensionär, granne,
+                    förälder eller lärare hjälpa barn som tappar kontakt med
+                    viktiga vuxna i sina liv när skolor, idrott och andra
+                    aktiviteter blir nedstängda genom att bli brevvän med ett
+                    barn.
                   </p>
                 </div>
                 <div
@@ -147,14 +154,32 @@ class Message extends Component {
                 <div className="input-row">
                   <input type="email" placeholder="E-post"></input>
                 </div>
-                <div
-                  onClick={this.handleIsSubmitted}
-                  className="button submit"
-                  tabIndex="1"
-                  role="button"
-                >
-                  Jag ställer upp!
+                <div className="gdpr-wrapper">
+                  <p className="disclaimer">
+                    Vi behandlar alla dina personuppgifter enligt GDPR och
+                    enbart för detta projekt. Vi kommer aldrig att sälja dina
+                    personuppgifter till tredje part.
+                  </p>
+                  <label className="container">
+                    Jag godkänner att mina personuppgifter sparas.
+                    <input
+                      type="checkbox"
+                      onChange={this.handleAcceptGdpr}
+                      checked={this.state.gdprAccepted}
+                    ></input>
+                    <span className="checkmark"></span>
+                  </label>
                 </div>
+                {this.state.gdprAccepted && (
+                  <div
+                    onClick={this.handleIsSubmitted}
+                    className="button submit"
+                    tabIndex="1"
+                    role="button"
+                  >
+                    Jag ställer upp!
+                  </div>
+                )}
               </form>
             </div>
           )}
@@ -182,7 +207,7 @@ class Message extends Component {
                 <div className="helper-wrapper">
                   <div className="intro-text">
                     <p className="description">
-                      Som lärare, fritidspedagog, granne,tränare, förälder
+                      Som lärare, fritidspedagog, granne, tränare, förälder
                       klickar du här:
                     </p>
                   </div>
@@ -238,14 +263,32 @@ class Message extends Component {
                   <div className="input-row">
                     <input type="email" placeholder="E-post"></input>
                   </div>
-                  <div
-                    onClick={this.handleIsSubmitted}
-                    className="button submit"
-                    tabIndex="1"
-                    role="button"
-                  >
-                    Jag ställer upp!
+                  <div className="gdpr-wrapper">
+                    <p className="disclaimer">
+                      Vi behandlar alla dina personuppgifter enligt GDPR och
+                      enbart för detta projekt. Vi kommer aldrig att sälja dina
+                      personuppgifter till tredje part.
+                    </p>
+                    <label className="container">
+                      Jag godkänner att mina personuppgifter sparas.
+                      <input
+                        type="checkbox"
+                        onChange={this.handleAcceptGdpr}
+                        checked={this.state.gdprAccepted}
+                      ></input>
+                      <span className="checkmark"></span>
+                    </label>
                   </div>
+                  {this.state.gdprAccepted && (
+                    <div
+                      onClick={this.handleIsSubmitted}
+                      className="button submit"
+                      tabIndex="1"
+                      role="button"
+                    >
+                      Jag ställer upp!
+                    </div>
+                  )}
                 </form>
               </div>
             )}
