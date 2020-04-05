@@ -162,7 +162,7 @@ class Message extends Component {
             !this.state.isElderHelper &&
             !this.state.isChildHelper &&
             !this.state.isSubmitted && (
-              <div className="landing">
+              <div className="sub-page">
                 <div className="helper-wrapper">
                   <div className="intro-text">
                     <p className="description">
