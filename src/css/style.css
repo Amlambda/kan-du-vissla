@@ -39,7 +39,7 @@ h2 {
 }
 
 .content {
-  background-image: url(../img/BACKGROUND_desktop.png);
+  background-image: url(../img/BACKGROUND_desktop.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -52,7 +52,7 @@ h2 {
     font-size: 54px;
   }
   .content {
-    background-image: url(../img/BACKGROUND_mobile.png);
+    background-image: url(../img/BACKGROUND_mobile.jpg);
   }
 }
 .wrapper {
@@ -64,7 +64,7 @@ h2 {
 .heart {
   width: 150px;
   height: 150px;
-  background-image: url(../img/heart.png);
+  background-image: url(../img/heart.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
