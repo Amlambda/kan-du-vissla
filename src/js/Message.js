@@ -174,7 +174,6 @@ class Message extends Component {
                   <div
                     onClick={this.handleIsSubmitted}
                     className="button submit"
-                    tabIndex="1"
                     role="button"
                   >
                     Jag ställer upp!
@@ -283,7 +282,6 @@ class Message extends Component {
                     <div
                       onClick={this.handleIsSubmitted}
                       className="button submit"
-                      tabIndex="1"
                       role="button"
                     >
                       Jag ställer upp!
